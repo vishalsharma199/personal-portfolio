@@ -1,0 +1,50 @@
+
+.outer-circle {
+    background-image: linear-gradient(0deg, rgba(2, 0, 36, 1) 0%, rgba(85, 66, 137, 0.387) 0%, rgba(0, 147, 255, 0.8604691876750701) 100%);
+    width: 305px;
+    height: 305px;
+    border-style: solid;
+    border-color: transparent;
+    border-radius: 50%;
+    border-width: 1px;
+    animation: rotateCircle 2s linear infinite;
+    padding: 2px;
+    display: table;
+  
+    .inner {
+        background: #fff;
+    height: 305px;
+    width: 305px;
+    border-style: solid;
+    border-color: transparent;
+    border-radius: 50%;
+    border-width: 2px;
+    animation: rotateCircle 2s linear infinite reverse;
+    display: table;
+    text-align: center;
+    }
+  
+  }
+  
+  @keyframes rotateCircle {
+    0% {
+      transform: rotate(0);
+    }
+  
+    25% {
+      transform: rotate(90deg);
+    }
+  
+    50% {
+      transform: rotate(180deg);
+    }
+  
+    75% {
+      transform: rotate(270deg);
+    }
+  
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  

@@ -1,0 +1,15 @@
+<div class="sidenav">
+    <div  class="sidebar" [ngClass]="isShowHide==false? 'side1':'side2'" >
+        <ul>
+            <li><a fragment="home" (click)="navigateToSection('home')"  [routerLinkActive]="'active'" >Home</a></li>
+            <li ><a fragment="about" (click)="navigateToSection('about')"  [routerLinkActive]="'active'"   >About Us</a></li>
+            <li><a  fragment="experience" (click)="navigateToSection('experience')"   [routerLinkActive]="'active'" > Experience </a></li>
+        </ul>
+    </div>
+  
+    <div class="nav" id="nav"  >
+        <i class="pi pi-align-justify" (click)="isShow(isShowHide)" ></i>
+    </div>
+
+   
+</div>

@@ -1,0 +1,94 @@
+<div class="dashboard">
+    <div class="banner" id="home">
+        <div class="row">
+            <div class="outer-circle">
+                <div class="inner">
+                    <div class="image"></div>
+                </div>
+            </div>
+            <div class="text">
+                <h1>Vishal Kumar</h1>
+                <p>I am a Frontend Angular Developer</p>
+            </div>
+            <div class="btn">
+                <button (click)="download()"> Download CV</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- about us -->
+    <div class="about" id="about">
+        <div class="left">
+            <h2>About Us</h2>
+            <div class="info">
+                <ul>
+                    <li>Angular Developer with 3 years of experience</li>
+                    <li>Expertise in Angular 2+ All versions</li>
+                    <li>Have good understanding of Angular, Javascript, Html, Css, Bootstrap, Prime ng, Jquery, ChartJs,
+                        Apache Echart with Responsive Designs</li>
+                </ul>
+                <p>Lover of innovation and everything related to generate new knowledge.Face problems with a smile and
+                    solve them as soon as possible. Very calculated about the time I spend and work I do.</p>
+            </div>
+        </div>
+        <div class="right">
+            <h2>Basic Information</h2>
+            <div class="info">
+                <ul>
+                    <li><label for="dob">Date Of Birth :</label> <Span>2 June 1997</Span></li>
+                    <li><label for="dob">Email :</label> <Span>v.vishalsharma1997@gmail.com</Span></li>
+                    <li><label for="dob">Mobile No :</label> <Span>9319356900</Span></li>
+                    <li><label for="dob">Language :</label> <Span>Hindi, English</Span></li>
+                    <li><label for="dob">Degree :</label> <Span>Btech / BE</Span></li>
+                    <li><label for="dob">Passing Year :</label> <Span>2019</Span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- work experiance -->
+    <div class="experiance" id="experience">
+        <div class="heading">
+            <h2>Work Experience</h2>
+        </div>
+        <div class="grids" *ngFor="let data of data">
+            <div class="right">
+                <div class="arrow-left"></div>
+                <div class="box">
+                    <h2>{{data.heading}} <span>- {{data.period}} </span></h2>
+                    <p>{{data.position}}</p>
+                    <ul>
+                        <li> {{data.exp}} </li>
+                        <li>{{data.exp2}} </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- skills -->
+    <div class="skills">
+        <div class="heading">
+            <h2>Skills</h2>
+        </div>
+        <div class="grids">
+            <div class="right">
+                <div class="box">
+                    <div class="sub grid">
+                        <div class="col-6 mt-2" *ngFor="let data of dataVal">
+                            <div class="text-box">
+                                <Label>{{data.values}}</Label>
+                                <span>
+                                    {{data.value}} %
+                                </span>
+                            </div>
+                            <p-progressBar [value]="data.value"></p-progressBar>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
